@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan Pada javascript</title>
+</head>
+<body>
+    <h1>Percabangan Pada javascript</h1>
+    <button onclick="funsiIf()">Percabangan IF</button> 
+    <br><br>
+    <button onclick="funsiIfElse()">Percabangan IF Else</button>
+    <br><br>
+    <button onclick="funsiIfElseIf()">Percabangan IF Else IF</button>
+    <br><br>
+    <button onclick="funsiSwitch()">Percabangan Switch</button>
+    <br><br>
+    <button onclick="ternary()">Percabangan Ternary</button>
+    <br><br>
+    <button onclick="fungsiIfNested()">Percabangan IF Nested</button>
+
+    <script>
+
+        function funsiIf(){
+            let nilai = prompt("Masukkan nilai anda : ",0);
+            if(nilai >= 70){
+                alert("Selamat anda lulus");
+            }
+        }
+
+
+        function funsiIfElse(){
+            let nilai = prompt("Masukkan nilai anda : ",0);
+            if(nilai >= 70){
+                alert("Selamat anda lulus");
+            }else{
+                alert("Maaf anda tidak lulus");
+            }
+        }
+
+
+        function funsiIfElseIf(){
+            let nilai = prompt("Masukkan nilai anda : ",0);
+            let pesan;
+            if(nilai >= 90) pesan="Selamat anda lulus dengan nilai A";
+            else if(nilai >= 80) pesan="Selamat anda lulus dengan nilai B+";
+            else if(nilai >= 70) pesan="Selamat anda lulus dengan nilai B";
+            else if(nilai >= 60) pesan="Selamat anda lulus dengan nilai C+";
+            else if(nilai >= 50) pesan="Selamat anda lulus dengan nilai C";
+            else if(nilai >= 40) pesan="Selamat anda lulus dengan nilai D";
+            else if(nilai >= 30) pesan="Selamat anda lulus dengan nilai E";
+            else pesan="Maaf anda tidak lulus dengan nilai F";
+
+            alert(pesan);
+        }
+
+
+        function funsiSwitch(){
+            let jawaban = prompt("Silakan pilih jawaban anda (A/B/C/D) : ","");
+            switch(jawaban.toUpperCase()){
+                case "A":
+                    alert("Jawaban anda benar");
+                    break;
+                case "B":
+                    alert("Jawaban anda salah");
+                    break;
+                case "C":
+                    alert("Jawaban anda salah");
+                    break;
+                case "D":
+                    alert("Jawaban anda salah");
+                    break;
+                default:
+                    alert("Jawaban anda tidak valid");
+                    break;
+            }
+        }
+
+
+        function ternary(){
+            let nilai = prompt("Apakah 10 Kurang Dari 20?(Ya/Tidak)","");
+
+            let pesan = nilai.toLowerCase == "ya" ? "Benar" : "Salah";
+            
+            alert(`Jawaban anda ${pesan}`);
+        }
+
+
+        function fungsiIfNested(){
+            let username = prompt("Masukkan username anda : ","");
+            let password = prompt("Masukkan password anda : ","");
+
+            if(username == "admin"){
+                if(password == "admin"){
+                    alert("Selamat datang admin");
+                }else{
+                    alert("Password anda salah");
+                }
+            }else{
+                alert("Username anda salah");
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

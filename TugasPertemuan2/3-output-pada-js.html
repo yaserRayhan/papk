@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh menampilkan output pada JS</title>
+</head>
+<body>
+
+    <button onclick="tampilAlert()">Klik!</button>
+    <br><br>
+    
+    <p>Contoh Inner html :</p>
+    <div id="hasil-output"></div>
+
+    <br><br>
+    <script>
+        function tampilAlert() {
+            alert("Ini merupakan hasil alert()");
+        }
+
+
+        console.log("Ini merupakan hasil console.log()");
+
+        document.write("<br>");
+        document.write("Ini merupakan hasil document.write()");
+
+        document.getElementById("hasil-output").innerHTML = "Ini merupakan hasil innerHTML";
+
+    </script>
+    
+</body>
+</html>

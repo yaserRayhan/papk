@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel dan Operator</title>
+</head>
+<body>
+    
+
+<script>
+
+//tipe data Variabel
+const number = 20;
+const string = "Yaser Rayhan";
+const boolean = true;
+const array = [1,2,3,4,5];
+const object = {
+    nama: "Yaser Rayhan",
+    umur: 20,
+    nim: "A22100135"
+};
+const fungsi= function(){
+    return "Ini merupakan hasil function";
+};
+
+//operator aritmatika
+const a = 10;
+const b = 20;
+document.write("<h1>Operator Aritmatika</h1>");
+document.write("Nilai a = " + a + "<br>");
+document.write("Nilai b = " + b + "<br>");
+document.write("Pertambahan (a + b) = " + (a+b) + "<br>");
+document.write("Pengurangan (a - b) = " + (a-b) + "<br>");
+document.write("Perkalian (a * b) = " + (a*b) + "<br>");
+document.write("Pemangkatan (a ** b) = " + (a**b) + "<br>");
+document.write("Pembagian (a / b) = " + (a/b) + "<br>");
+document.write("Modulus (a % b) = " + (a%b) + "<br><br>");
+
+
+//operator penugasan
+let score =100;
+document.write("<h1>Operator Penugasan</h1>");
+document.write("Nilai score = " + score + "<br>");
+document.write("score += 5 = " + (score+=5) + "<br>");
+document.write("score -= 2 = " + (score-=2) + "<br>");
+document.write("score *= 2 = " + (score*=2) + "<br>");
+document.write("score /= 4 = " + (score/=4) + "<br>");
+document.write("score **= 2 = " + (score**=2) + "<br>");
+document.write("score %= 3 = " + (score%=3) + "<br><br>");
+
+
+//operator perbandingan
+const nilai1 = 20;
+const nilai2 = 19;
+document.write("<h1>Operator Perbandingan</h1>");
+document.write("Nilai 1 = " + nilai1 + "<br>");
+document.write("Nilai 2 = " + nilai2 + "<br>");
+document.write("nilai1 == nilai2 = " + (nilai1==nilai2) + "<br>");
+document.write("nilai1 > nilai2 = " + (nilai1>nilai2) + "<br>");
+document.write("nilai1 >= nilai2 = " + (nilai1>=nilai2) + "<br>");
+document.write("nilai1 < nilai2 = " + (nilai1<nilai2) + "<br>");
+document.write("nilai1 <= nilai2 = " + (nilai1<=nilai2) + "<br><br>");
+document.write("nilai1 != nilai2 = " + (nilai1!=nilai2) + "<br>");
+
+
+//operator logika
+const benar = true;
+const salah = false;
+document.write("<h1>Operator Logika</h1>");
+document.write("Benar = " + benar + "<br>");
+document.write("Salah = " + salah + "<br>");
+document.write("benar && salah = " + (benar && salah) + "<br>");
+document.write("benar || salah = " + (benar || salah) + "<br>");
+document.write("!benar = " + (!benar) + "<br>");
+
+
+//operator ternary
+const pertanyaan = confirm("Ternary | Apakah Umur Anda lebih dari 18? klik cancel apabila tidak");
+const hasil = pertanyaan ? "Anda boleh masuk" : "Anda tidak boleh masuk";
+document.write("<h1>Operator Ternary</h1>");
+document.write(hasil + "<br>");
+
+</script>
+</body>
+</html>
