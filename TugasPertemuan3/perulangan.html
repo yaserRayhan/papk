@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //perulangan for
+        document.write("<h1>Perulangan For</h1>");
+        for(let i=1; i<=10; i++){
+            document.write("Perulangan for ke-"+i+"<br>");
+        }
+
+        document.write("<br><br>");
+
+        //perulangan while
+        document.write("<h1>Perulangan While</h1>");
+        let ulangi=true;
+        let i=1;
+        while(ulangi){
+            document.write("Perulangan while ke-"+i+"<br>");
+            if(i==10) ulangi=false;
+            i++;
+        }
+
+        document.write("<br><br>");
+
+        //perulangan do while
+        document.write("<h1>Perulangan Do While</h1>");
+        let ulangi2=true;
+        let j=1;
+        do{
+            document.write("Perulangan do while ke-"+j+"<br>");
+            if(j==10) ulangi2=false;
+            j++;
+        }while(ulangi2);
+
+        document.write("<br><br>");
+
+        //perulangan for in
+        document.write("<h1>Perulangan For In</h1>");
+        let arrayBuah = ["Apel","Jeruk","Mangga","Pisang","Semangka"];
+        for(let buah in arrayBuah){
+            document.write("Buah ke-"+buah+" adalah "+arrayBuah[buah]+"<br>");
+        }
+
+        document.write("<br><br>");
+
+        //perulangan forEach
+        document.write("<h1>Perulangan For Each</h1>");
+
+        let hari=["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"];
+        hari.forEach(function(hari){
+            document.write(hari+"<br>");
+        });
+
+        document.write("<br><br>");
+
+
+        //repeat
+        document.write("<h1>Perulangan Repeat</h1>");
+        let nama="Yaser | ";
+        document.write(nama.repeat(5));
+
+        document.write("<br><br>");
+
+
+        //perulangan bersarang (nested)
+        document.write("<h1>Perulangan Bersarang (Nested)</h1>");
+        for(let i=1; i<=5; i++){
+            for(let j=1; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+    </script>
+</body>
+</html>

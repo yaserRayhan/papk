@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanjutan Dari Modul 2</title>
+</head>
+<body>
+
+    <form onsubmit="return false">
+        <label>Masukan Nilai :</label><br>
+        <input type="text" id="input_jumlah" value="" placeholder="Jumlah"><br>
+        <input type="text" id="input_harga" placeholder="Harga"><br>
+        <button id="tombol_form">Tampilkan Nilai Pada Jendela Baru</button>
+    </form>
+
+    <h2>Hasil : <span id="hasil"></span></h2>
+    <h2><span id="hadiah"></span></h2>
+
+    <script>
+        document.getElementById("tombol_form").addEventListener("click",tampil_nilai_form);
+
+        function tampil_nilai_form(){
+            let jumlah = document.getElementById("input_jumlah").value;
+            let harga = document.getElementById("input_harga").value;
+            let total = jumlah * harga;
+            document.getElementById("hasil").innerHTML = total;
+            if(total >=10){
+                document.getElementById("hadiah").innerHTML = "Selamat anda mendapatkan hadiah";
+                return;
+            }else{
+                document.getElementById("hadiah").innerHTML="";
+            }
+           
+        }
+    </script>
+    
+</body>
+</html>
