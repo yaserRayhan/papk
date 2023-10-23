@@ -10,7 +10,7 @@
 
     <fieldset>
         <legend>Input form</legend>
-        <input type="text" nama="barang" placeholder="Inputkan nama barang...">
+        <input type="text" name="barang" placeholder="Inputkan nama barang...">
         <input type="button" onclick="addBarang()" value="Tambah">
     </fieldset>
 
@@ -36,6 +36,7 @@
 
         function addBarang(){
             var input = document.querySelector("input[name=barang]");
+            console.log(input.value);
             dataBarang.push(input.value);
             showBarang();
         }
