@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Input form</legend>
+        <input type="text" nama="barang" placeholder="Inputkan nama barang...">
+        <input type="button" onclick="addBarang()" value="Tambah">
+    </fieldset>
+
+    <div>
+        <ul id="list-barang"></ul>
+    </div>
+
+
+    <script>
+      var dataBarang = [
+        "Buku Tulis",
+        "Pensil",
+        "Spidol"
+      ];
+
+      function showBarang(){
+        var listBarang = document.getElementById("list-barang");
+        listBarang.innerHTML = "";
+        for(let i=0; i<dataBarang.length; i++){
+          listBarang.innerHTML += "<li>" + dataBarang[i] + "[ <a href='#' onclick='editBarang("+i+")'>Edit</a> | <a href='#' onclick='deleteBarang("+i+")'>Delete</a> ]</li> ";
+        }
+      }
+
+        function addBarang(){
+            var input = document.querySelector("input[name=barang]");
+            dataBarang.push(input.value);
+            showBarang();
+        }
+
+        function editBarang(id){
+            var newBarang = prompt("Nama baru", dataBarang[id]);
+            dataBarang[id] = newBarang;
+            showBarang();
+        }
+
+        function deleteBarang(id){
+            dataBarang.splice(id, 1);
+            showBarang();
+        }
+
+        showBarang();
+
+    </script>
+    
+</body>
+</html>

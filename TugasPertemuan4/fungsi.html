@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi JS</title>
+</head>
+<body>
+    <h1>Fungsi JS</h1>
+    <button onclick="fungsi1()">Fungsi 1</button>
+    <br><br>
+    <button onclick="fungsiParameter(1,5)">Fungsi dengan parameter</button>
+    <script>
+        function fungsi1(){
+            alert("Fungsi Pertama");
+        }
+
+        var fungsi2 = function(){
+            alert("Fungsi Kedua");
+        }
+
+        var fungsiArrow = () => {
+            alert("Fungsi Arrow");
+        }
+
+        var fungsiArrow2 = (nama) =>  alert("Fungsi Arrow 2 " + nama);
+
+        //fungsi dengan konstruktor, tidak di rekomendasikan
+        var fungsi3 = new Function("alert('Fungsi Ketiga')");
+
+        //fungsi dengan parameter
+        function fungsiParameter(a,b){
+            alert("Fungsi dengan parameter " + (a+b));
+        }
+    </script>
+    
+</body>
+</html>
